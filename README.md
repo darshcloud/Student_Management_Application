@@ -1,1 +1,5 @@
-# Student_Management_Application
+# Student Management Application
+
+### Tech Stack
+Frontend : React <br/>
+Backend : Django Rest Framework
