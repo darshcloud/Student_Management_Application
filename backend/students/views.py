@@ -18,3 +18,21 @@ class StudentView(APIView):
             serializer.save()
             return JsonResponse("Student Added Successfully", safe=False)
         return JsonResponse("Failed to Add Student", safe=False)
+
+    def get_Student(self, pk):
+        try:
+            student = Student.objects.get(studentId=pk)
+            return student
+        except Student.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk=None):
+        if pk:
+            data = self.get_Student(pk)
+            serializer = StudentSerializer(data)
+        else:
+            data = Student.objects.all()
+            serializer = StudentSerializer(data, many=True)
+        return Response(serializer.data)
+
+
