@@ -17,7 +17,7 @@ Make sure you have python and Node js installed on your system
 
 - Clone the repository in a local folder
     ```sh
-    git clone 
+    git clone https://github.com/darshcloud/Student_Management_Application.git 
     ```
 - Open terminal and verify the python version installed
   ```sh
